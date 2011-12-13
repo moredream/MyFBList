@@ -19,14 +19,27 @@ $(document).ready(function () {
 
         $.getJSON(get_facebook_info, function(data) {
 
+          $("#post_facebook_id").val(data.id);
+
+          prepare_input("#post_name");
+          prepare_input("#post_url");
+          prepare_input("#post_description");
+
+
           $("#post_name").val(data.name);
           $("#post_url").val(data.link);
           $("#post_description").val(data.description);
-          $("#post_facebook_id").val(data.id);
+
           $("#post_count").val(data.likes);
+
 
         });
 
     });
+
+    function prepare_input(id){
+          $(id).attr("class", "textc");
+          $(id).removeAttr("disabled");
+    }
 
 });

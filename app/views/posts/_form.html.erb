@@ -18,20 +18,20 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name ,:class => 'flatc',:disabled => true%>
   </div>
   <div class="field">
     <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.text_field :url ,:class => 'flatc',:disabled => true%>
   </div>
 
   <div class="field">
     <%= f.label :count %><br />
-    <%= f.text_field :count %>
+    <%= f.text_field :count ,:class => 'flatc',:disabled => true%>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description ,:class => 'flatc',:disabled => true%>
   </div>
   <div class="actions">
     <%= f.submit %>
