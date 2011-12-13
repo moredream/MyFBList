@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
 <p>
   <b>Name:</b>
   <%= @post.name %>
@@ -11,8 +15,8 @@
 </p>
 
 <p>
-  <b>Facebookid:</b>
-  <%= @post.facebookid %>
+  <b>Facebook_id:</b>
+  <%= @post.facebook_id %>
 </p>
 
 <p>
@@ -25,6 +29,3 @@
   <%= @post.description %>
 </p>
 
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>

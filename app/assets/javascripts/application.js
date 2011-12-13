@@ -7,3 +7,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function () {
+
+    $('input[name$="validation"]').click(function () {
+
+        var get_facebook_info = "";
+        // check validation facebook_id field
+        get_facebook_info ="https://graph.facebook.com/"+ $("#post_facebook_id").val();
+
+
+        $.getJSON(get_facebook_info, function(data) {
+
+          $("#post_name").val(data.name);
+          $("#post_url").val(data.link);
+          $("#post_description").val(data.description);
+          $("#post_facebook_id").val(data.id);
+          $("#post_count").val(data.likes);
+
+        });
+
+    });
+
+});

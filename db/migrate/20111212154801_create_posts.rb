@@ -9,7 +9,8 @@ class CreatePosts < ActiveRecord::Migration
 
       t.timestamps
     end
-     add_index :posts, :count,facebook_id
+     add_index :posts, :count
+     add_index :posts, :facebook_id ,:unique =>true
   end
 
 end

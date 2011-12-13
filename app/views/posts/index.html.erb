@@ -1,31 +1,34 @@
-<h1>Listing posts</h1>
+<h1>Company Lists</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Facebookid</th>
-    <th>Count</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.name %></td>
-    <td><%= post.url %></td>
-    <td><%= post.facebookid %></td>
-    <td><%= post.count %></td>
-    <td><%= post.description %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <%= link_to 'Register my company', new_post_path %>
+
+<h2></h2>
+
+  <table class="yui-grid" width="90%" cellspacing="0" border="0">
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Facebook_id</th>
+      <th>Count</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= link_to post.name, post %></td>
+      <td><%= post.url %></td>
+      <td><%= post.facebook_id %></td>
+      <td><%= post.count %></td>
+      <td><%= post.description %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>

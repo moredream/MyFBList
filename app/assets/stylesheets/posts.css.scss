@@ -1,3 +1,40 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+input
+{
+    border: 1px solid #ccc;
+}
+
+textarea{
+    border: 1px solid #ccc;
+    width:400px;
+    height:100px;
+}
+
+.yui-grid {
+	BORDER-BOTTOM: #7f7f7f 1px solid; BORDER-LEFT: #7f7f7f 1px solid; BORDER-COLLAPSE: collapse; FONT-FAMILY: arial; FONT-SIZE: small; BORDER-TOP: #7f7f7f 1px solid; BORDER-RIGHT: #7f7f7f 1px solid
+}
+.yui-grid TH {
+	BORDER-BOTTOM: #989898 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #989898; PADDING-BOTTOM: 4px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; WHITE-SPACE: nowrap; BACKGROUND: url(../assets/images/sprite.png) repeat-x 0px 0px; COLOR: #000; VERTICAL-ALIGN: bottom; BORDER-TOP: #989898 1px solid; BORDER-RIGHT: #cbcbcb 1px solid; PADDING-TOP: 4px
+}
+.yui-grid TH A {
+	TEXT-ALIGN: center; PADDING-RIGHT: 10px; DISPLAY: block; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+
+.yui-grid TD {
+	BORDER-BOTTOM: #cbcbcb 1px solid; BORDER-LEFT: #cbcbcb 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP: #cbcbcb 1px solid; BORDER-RIGHT: #cbcbcb 1px solid; PADDING-TOP: 4px
+}
+.yui-grid .altrow {
+	BACKGROUND-COLOR: #edf5ff
+}
+.yui-grid .row .sort {
+	BACKGROUND-COLOR: #edf5ff
+}
+.yui-grid .altrow .sort {
+	BACKGROUND-COLOR: #dbeaff
+}
+.yui-grid .row {
+	BACKGROUND-COLOR: #fff
+}

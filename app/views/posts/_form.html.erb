@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :facebook_id %><br />
+    <%= f.text_field :facebook_id %>        <%= f.submit :name =>'validation', :type =>'button' ,:value => 'Validation' %>
+  </div>
+
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
@@ -19,13 +24,10 @@
     <%= f.label :url %><br />
     <%= f.text_field :url %>
   </div>
-  <div class="field">
-    <%= f.label :facebookid %><br />
-    <%= f.text_field :facebookid %>
-  </div>
+
   <div class="field">
     <%= f.label :count %><br />
-    <%= f.number_field :count %>
+    <%= f.text_field :count %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
