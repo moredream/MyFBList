@@ -11,7 +11,7 @@
       <th>Url</th>
       <th>Facebook_id</th>
       <th>Count</th>
-      <th>Description</th>
+
       <th></th>
       <th></th>
     </tr>
@@ -22,7 +22,7 @@
       <td><%= post.url %></td>
       <td><%= post.facebook_id %></td>
       <td><%= post.count %></td>
-      <td><%= post.description %></td>
+
       <td><%= link_to 'Edit', edit_post_path(post) %></td>
       <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
     </tr>

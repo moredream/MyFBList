@@ -14,17 +14,17 @@ $(document).ready(function () {
 
         var get_facebook_info = "";
         // check validation facebook_id field
-        get_facebook_info ="https://graph.facebook.com/"+ $("#post_facebook_id").val();
-
-
-        $.getJSON(get_facebook_info, function(data) {
+        var facebook_id_s = $("#post_facebook_id").val();
+        if(facebook_id_s.length > 0)             {
+          get_facebook_info ="https://graph.facebook.com/"+    facebook_id_s;
+          $.getJSON(get_facebook_info, function(data) {
 
           $("#post_facebook_id").val(data.id);
 
           prepare_input("#post_name");
           prepare_input("#post_url");
           prepare_input("#post_description");
-
+          prepare_input("#post_count");
 
           $("#post_name").val(data.name);
           $("#post_url").val(data.link);
@@ -34,6 +34,9 @@ $(document).ready(function () {
 
 
         });
+        }else{
+            alert("type your facebook id or facebook name");
+        }
 
     });
 

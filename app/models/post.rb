@@ -5,4 +5,9 @@ class Post < ActiveRecord::Base
   validates :description,  :presence => true
   validates_uniqueness_of :facebook_id
 
+  scope :count_by_desc_limit20, Post.order("posts.count desc").limit(20)
+
+  def update_status
+
+  end
 end

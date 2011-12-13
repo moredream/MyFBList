@@ -2,13 +2,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.count_by_desc_limit20
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
   end
+
 
   # GET /posts/1
   # GET /posts/1.json
@@ -46,6 +47,8 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
+
+        Delayed::Job.enqueue GetFbInfo.new(@post.id, @post.count), -3, 3.minutes.from_now
       else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }

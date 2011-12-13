@@ -7,6 +7,7 @@ gem 'rails', '3.1.3'
 
 gem 'pg'
 
+gem 'delayed_job_active_record'
 
 # Gems used only for assets and not required
 # in production environments by default.
