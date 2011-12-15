@@ -1,4 +1,4 @@
-<h1>Company Lists</h1>
+<h1>Company List</h1>
 
 
   <%= link_to 'Register my company', new_post_path %>
@@ -15,7 +15,6 @@
       <th></th>
       <th></th>
     </tr>
-
   <% @posts.each do |post| %>
     <tr>
       <td><%= link_to post.name, post %></td>

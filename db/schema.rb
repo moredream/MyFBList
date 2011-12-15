@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111213062922) do
+ActiveRecord::Schema.define(:version => 20111214060111) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20111213062922) do
     t.string   "name"
     t.string   "url"
     t.string   "facebook_id"
-    t.integer  "count"
+    t.integer  "count",       :default => 0, :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

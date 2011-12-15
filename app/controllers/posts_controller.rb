@@ -1,13 +1,24 @@
 class PostsController < ApplicationController
+
+
+  def change_counts
+      @posts = Post.all
+      @posts.each do |post|
+        Delayed::Job.enqueue GetFbInfo.new(post.id, post.facebook_id), 1, 1.minutes.from_now
+      end
+  end
+
   # GET /posts
   # GET /posts.json
   def index
+
     @posts = Post.count_by_desc_limit20
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
+
   end
 
 
@@ -33,6 +44,7 @@ class PostsController < ApplicationController
     end
   end
 
+
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
@@ -48,7 +60,7 @@ class PostsController < ApplicationController
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
 
-        Delayed::Job.enqueue GetFbInfo.new(@post.id, @post.count), -3, 3.minutes.from_now
+         Delayed::Job.enqueue GetFbInfo.new(@post.id, @post.facebook_id), 1, 3.minutes.from_now
       else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
@@ -65,6 +77,7 @@ class PostsController < ApplicationController
       if @post.update_attributes(params[:post])
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :ok }
+
       else
         format.html { render action: "edit" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
@@ -83,4 +96,5 @@ class PostsController < ApplicationController
       format.json { head :ok }
     end
   end
+
 end

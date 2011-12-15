@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.string :facebook_id
-      t.integer :count
+      t.integer :count      , :default => 0
       t.text :description
 
       t.timestamps

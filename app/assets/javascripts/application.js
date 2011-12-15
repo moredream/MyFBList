@@ -30,7 +30,7 @@ $(document).ready(function () {
           $("#post_url").val(data.link);
           $("#post_description").val(data.description);
 
-          $("#post_count").val(data.likes);
+        //  $("#post_count").val('0');
 
 
         });

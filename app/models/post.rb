@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
   scope :count_by_desc_limit20, Post.order("posts.count desc").limit(20)
 
-  def update_status
 
-  end
+
+
 end
