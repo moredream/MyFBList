@@ -9,20 +9,19 @@
     <tr>
       <th>Name</th>
       <th>Url</th>
-      <th>Facebook_id</th>
       <th>Count</th>
+      <th>Facebook_id</th>
 
-      <th></th>
+
       <th></th>
     </tr>
   <% @posts.each do |post| %>
     <tr>
       <td><%= link_to post.name, post %></td>
-      <td><%= post.url %></td>
-      <td><%= post.facebook_id %></td>
+      <td><%= link_to post.url, post.url %></td>
       <td><%= post.count %></td>
+      <td><%= post.facebook_id %></td>
 
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
       <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
     </tr>
   <% end %>

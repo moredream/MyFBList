@@ -34,3 +34,4 @@ class GetFbInfo < Struct.new(:id, :facebook_id)
 end
 
 
+

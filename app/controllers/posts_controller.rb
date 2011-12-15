@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
-
-
-
   # GET /posts
   # GET /posts.json
   def index
+
+    Post.get_likes
 
     @posts = Post.count_by_desc_limit20
 

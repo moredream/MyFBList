@@ -1,10 +1,8 @@
 namespace :scheduler do
 desc "This task is called by the Heroku scheduler add-on"
-task :change_counts => :environment do
+task :change_all => :environment do
 
-  puts "Brushed teeth."
-  Post.all
-
+  JobsFBCounts.update_all_counts
 end
 
 end
