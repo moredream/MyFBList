@@ -19,7 +19,7 @@
     <tr>
       <td><%= link_to post.name, post %></td>
       <td><%= link_to post.url, post.url %></td>
-      <td><%= post.count %></td>
+      <td class="cnumber"><%= number_with_delimiter(post.count, :delimiter => ",")%></td>
       <td><%= post.facebook_id %></td>
 
       <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>

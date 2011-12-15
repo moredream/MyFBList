@@ -3,8 +3,6 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
 
-    Post.get_likes
-
     @posts = Post.count_by_desc_limit20
 
     respond_to do |format|
