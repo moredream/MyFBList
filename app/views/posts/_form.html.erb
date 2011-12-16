@@ -10,24 +10,27 @@
       </ul>
     </div>
   <% end %>
+  <p id="notice">Please type your facebook id or url</p>
 
   <div class="field">
-    <%= f.label :facebook_id %><br />
-    <%= f.text_field :facebook_id %>        <%= f.submit :name =>'validation', :type =>'button' ,:value => 'Validation' %>
+    <%= f.label :facebook_id , 'Facebook ID' %><br />
+    <%= f.text_field :facebook_id %>  <%= f.submit :name =>'validation', :type =>'button' ,:value => 'Validation' %>
+    <span id="msg_f" class="message"></span>
+
   </div>
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name , :class => 'textc'%>   <span id="msg_name" class="message"></span>
   </div>
   <div class="field">
     <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.text_field :url  , :class => 'textc' %>  <span id="msg_url" class="message"></span>
   </div>
 
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description %> <span id="msg_description" class="message"></span>
   </div>
   <div class="actions">
     <%= f.submit %>

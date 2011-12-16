@@ -6,9 +6,11 @@ input
 {
     border: 1px solid #ccc;
 }
+
 .cnumber{
     text-align:right;
 }
+
 .flatc {
 	color: #000000;
 	letter-spacing: -0.02em;
@@ -16,9 +18,17 @@ input
 	outline: none;
 	border: none;
 }
+.textc-fleeze {
+   border: 1px solid #ccc;
+   background-color: #7f7f7f;
+}
 .textc {
    border: 1px solid #ccc;
    width: 250px;
+}
+
+.message{
+  color:red;
 }
 
 textarea{
