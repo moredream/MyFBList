@@ -12,19 +12,14 @@ input
 }
 
 .flatc {
-	color: #000000;
-	letter-spacing: -0.02em;
-	text-align:right;
-	outline: none;
-	border: none;
+   background-color: #ECF1EF;
+   border: 1px solid #ECF1EF;
+   width:300px;
 }
-.textc-fleeze {
-   border: 1px solid #ccc;
-   background-color: #7f7f7f;
-}
+
 .textc {
-   border: 1px solid #ccc;
-   width: 250px;
+   border: 1px solid #ECF1EF;
+   width:300px;
 }
 
 .message{
@@ -32,8 +27,8 @@ input
 }
 
 textarea{
-    border: 1px solid #ccc;
-    width:400px;
+    border: 1px solid #F6F9ED;
+    width:300px;
     height:100px;
 }
 
