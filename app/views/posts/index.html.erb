@@ -1,32 +1,35 @@
-<h1>Company List</h1>
+<div class="page">
+  <div class="main">
+    <h1>Company List</h1>
 
 
-  <%= link_to 'Register my company', new_post_path %>
+    <%= link_to 'Register my company', new_post_path %>
 
-<h2></h2>
+    <h2></h2>
 
-  <table class="yui-grid" width="90%" cellspacing="0" border="0">
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Count</th>
-      <th>Facebook_id</th>
+      <table class="yui-grid" width="100%" cellspacing="0" border="0">
+        <tr>
+          <th>Name</th>
+          <th>Url</th>
+          <th>Count</th>
+          <th>Facebook_id</th>
 
-
-      <th></th>
-    </tr>
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= link_to post.name, post %></td>
-      <td><%= link_to post.url, post.url %></td>
-      <td class="cnumber"><%= number_with_delimiter(post.count, :delimiter => ",")%></td>
-      <td><%= post.facebook_id %></td>
-
-      <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-    </tr>
-  <% end %>
-  </table>
+        </tr>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= link_to post.name, post %></td>
+          <td><%= link_to post.url, post.url %></td>
+          <td class="cnumber"><%= number_with_delimiter(post.count, :delimiter => ",")%></td>
+          <td><%= post.facebook_id %></td>
+        </tr>
+      <% end %>
+      </table>
 
 
-<br />
+    <br />
+
+
+
+  </div>
+</div>
 
